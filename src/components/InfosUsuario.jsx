@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InfosUsuario = () => {
-  const autor = "Amanda";
+    const autor = 'Amanda';
     return (
         <>
             {/* <div>InfosUsuario</div> */}
