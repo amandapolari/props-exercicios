@@ -6,13 +6,13 @@ export function reproduzVideo() {
 }
 
 export function CardVideo(props) {
-    const { imagem, titulo } = props;
+    const { infosVideo } = props;
     const autor = 'Amanda';
     return (
         <div>
             <div className="box-pagina-principal" onClick={reproduzVideo}>
-                {imagem}
-                <h4>{titulo}</h4>
+                {infosVideo.imagem}
+                <h4>{infosVideo.titulo}</h4>
                 <InfosUsuario autor={autor} />
             </div>
         </div>

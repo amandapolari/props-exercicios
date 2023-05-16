@@ -2,10 +2,40 @@ import React from 'react';
 import { CardVideo } from './components/CardVideo';
 import './styles.css';
 export default function App() {
-    const infosVideo = {
-        imagem: <img src="https://picsum.photos/400/400?a=1 " alt="" />,
-        titulo: 'Título do vídeo',
-    };
+    const infosVideo = [
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=1 " alt="" />,
+            titulo: 'Título 1',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=2 " alt="" />,
+            titulo: 'Título 2',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=3 " alt="" />,
+            titulo: 'Título 3',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=4 " alt="" />,
+            titulo: 'Título 4',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=5 " alt="" />,
+            titulo: 'Título 5',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=6 " alt="" />,
+            titulo: 'Título 6',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=7 " alt="" />,
+            titulo: 'Título 7',
+        },
+        {
+            imagem: <img src="https://picsum.photos/400/400?a=8 " alt="" />,
+            titulo: 'Título 8',
+        },
+    ];
 
     return (
         <div>
@@ -30,38 +60,10 @@ export default function App() {
                     </nav>
 
                     <section className="painel-de-videos">
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
-                        <CardVideo
-                            imagem={infosVideo.imagem}
-                            titulo={infosVideo.titulo}
-                        />
+                        {infosVideo.map((item) => {
+                            // console.log(item)
+                            return <CardVideo infosVideo={item} />;
+                        })}
                     </section>
                 </main>
 
