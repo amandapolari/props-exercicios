@@ -1,19 +1,19 @@
 import React from 'react';
 import InfosUsuario from './InfosUsuario.jsx';
 
-const titulo = 'Título do vídeo';
-
 export function reproduzVideo() {
     alert('O vídeo está sendo reproduzido');
 }
 
-export function CardVideo() {
+export function CardVideo(props) {
+    const { imagem, titulo } = props;
+    const autor = 'Amanda';
     return (
         <div>
             <div className="box-pagina-principal" onClick={reproduzVideo}>
-                <img src="https://picsum.photos/400/400?a=1 " alt="" />
+                {imagem}
                 <h4>{titulo}</h4>
-                <InfosUsuario />
+                <InfosUsuario autor={autor} />
             </div>
         </div>
     );
