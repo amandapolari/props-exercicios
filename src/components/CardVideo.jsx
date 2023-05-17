@@ -5,8 +5,8 @@ export function reproduzVideo() {
     alert('O vídeo está sendo reproduzido');
 }
 
-export function CardVideo(props) {
-    const { infosVideo } = props;
+export function CardVideo({ infosVideo }) {
+    // const { infosVideo } = props;
     const autor = 'Amanda';
     return (
         <div>

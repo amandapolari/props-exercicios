@@ -1,7 +1,6 @@
 import React from 'react';
 
-const InfosUsuario = (props) => {
-    const { autor } = props;
+const InfosUsuario = ({ autor }) => {
     return (
         <>
             <h4>{autor}</h4>
